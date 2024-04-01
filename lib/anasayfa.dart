@@ -43,7 +43,7 @@ class _AnasayfaState extends State<Anasayfa> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
-                child: Container(height: ekranYuksekligi/3,width: ekranGenisligi,child: Image.asset("images/rdr2.png")),
+                child: SizedBox(height: ekranYuksekligi/3,width: ekranGenisligi,child: Image.asset("images/rdr2.png")),
               ),Padding(
                 padding: const EdgeInsets.only(top: 8.0,bottom: 20),
                 child: Row(
@@ -75,33 +75,30 @@ class _AnasayfaState extends State<Anasayfa> {
               ),
               Text("Red Dead Redemption II",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold,color: turkuazRenk),),
               Padding(
-                padding: const EdgeInsets.only(bottom: 10,top: 8),
+                padding: const EdgeInsets.only(bottom: 10,top: 10),
                 child: Text("Hikâye, 1899'da Batı, Ortabatı ve Güney ABD'nın kurgusal bir temsilinde geçmektedir. Oyuncu, oyunun başlarında Van der Linde çetesinin bir üyesi olan kanun kaçağı Arthur Morgan'ı oynamaktadır; sonsözde ise yine çetenin bir üyesi olmuş ancak sonradan çete ile yollarını ayırmış John Marston'ı oynamaktadır, John Marston karakterinin yaşam hikâyesi ise serinin ilk oyunu Red Dead Redemption'de devam eder.",style: GoogleFonts.aBeeZee(fontSize: 14,color: acikYesilRenk),softWrap: true),
               ),
               Expanded(
-                child: Padding(
-                  padding:  EdgeInsets.only(top:ekranYuksekligi/5),
-                  child: Row(
-                    children: [
-                      TextButton(onPressed: (){},style: TextButton.styleFrom(
-                          backgroundColor: Colors.grey[400],fixedSize: Size(ekranGenisligi/2.5, ekranYuksekligi/11),
-                          shape: const RoundedRectangleBorder(borderRadius:  BorderRadius.all(Radius.circular(15)))
-                      ),
-                          child: Text("Price 59.90 \$",style: GoogleFonts.aBeeZee(fontSize: 18,color: kapaliYesiRenk,fontWeight: FontWeight.bold))),
-                      const Spacer(),
-                      TextButton(onPressed: (){},style: TextButton.styleFrom(
-                              backgroundColor: turkuazRenk,fixedSize: Size(ekranGenisligi/2, ekranYuksekligi/11),
-                              shape: const RoundedRectangleBorder(borderRadius:  BorderRadius.all(Radius.circular(15)))
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Icon(Icons.shopping_cart,color: Colors.white,size: 30,),
-                              Text("Add to cart",style: GoogleFonts.aBeeZee(fontSize: 18,color: Colors.white,fontWeight: FontWeight.bold)),
-                            ],
-                          )),
-                    ],
-                  ),
+                child: Row(
+                  children: [
+                    TextButton(onPressed: (){},style: TextButton.styleFrom(
+                        backgroundColor: Colors.grey[400],fixedSize: Size(ekranGenisligi/2.5, ekranYuksekligi/11),
+                        shape: const RoundedRectangleBorder(borderRadius:  BorderRadius.all(Radius.circular(15)))),
+                        child: Text("Price 59.90 \$",style: GoogleFonts.aBeeZee(fontSize: 18,color: kapaliYesiRenk,fontWeight: FontWeight.bold))),
+                    const Spacer(),
+                    TextButton(onPressed: (){},style: TextButton.styleFrom(
+                            backgroundColor: turkuazRenk,fixedSize: Size(ekranGenisligi/2, ekranYuksekligi/11),
+                            shape: const RoundedRectangleBorder(borderRadius:  BorderRadius.all(Radius.circular(15)))
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(Icons.shopping_cart,color: Colors.white,size: 30,),
+                            Text("Add to cart",style: GoogleFonts.aBeeZee(fontSize: 18,color: Colors.white,fontWeight: FontWeight.bold)),
+                          ],
+                        )
+                    ),
+                  ],
                 ),
               )
             ],
